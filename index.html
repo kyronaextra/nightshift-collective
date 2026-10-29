@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NightShift Collective | Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #050505;
+  --card: #0f0f0f;
+  --border: #1c1c1c;
+  --text: #ffffff;
+  --muted: #a0a0a0;
+  --pink: #ff6b9d;
+  --green: #00d4aa;
+  --gradient: linear-gradient(135deg, #ff6b9d 0%, #00d4aa 100%);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system_ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+.logo img {
+  height: 48px;
+  width: auto;
+  border-radius: 4px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+nav { display: flex; gap: 32px; align-items: center; }
+nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+nav a:hover { color: var(--text); }
+.nav-actions { display: flex; gap: 12px; }
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid #333;
+  color: var(--text);
+}
+.btn-outline:hover { border-color: #555; }
+.btn-primary {
+  background: var(--gradient);
+  color: #000;
+  font-weight: 600;
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 0 60px;
+}
+.eyebrow {
+  color: var(--pink);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.hero h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 4.2rem;
+  line-height: 1.05;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: italic;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero p { color: var(--muted); max-width: 480px; margin-bottom: 32px; font-size: 1.05rem; }
+.hero-cta { display: flex; gap: 16px; align-items: center; }
+.hero-logo img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 40px rgba(255, 107, 157, 0.25));
+}
+section { padding: 80px 0; }
+.section-label {
+  color: var(--pink);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.subtitle { color: var(--muted); margin-bottom: 40px; max-width: 500px; }
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: start;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+}
+footer {
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .hero p, .hero-cta { margin-left: auto; margin-right: auto; justify-content: center; }
+  .split { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 3rem; }
+  nav { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="NightShift">
+      <div>
+        NightShift<br><span style="font-size:0.75rem; color:var(--muted); letter-spacing:1px;">COLLECTIVE</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#tools">Tools</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-outline">Log In</button>
+      <button class="btn btn-primary">Get Started</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Custom Tools. Built for Businesses & Creators.</div>
+      <h1>Solutions that work<br>when <em>you</em> do.</h1>
+      <p>Nightshift Collective builds custom payment platforms, backends, dashboards, marketing tools, consumer profiling systems, and integrations. Secure. Fast. Built for you.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary">Start a Project →</button>
+        <a href="#services" style="color:var(--muted); text-decoration:none;">Learn More →</a>
+      </div>
+    </div>
+    <div class="hero-logo">
+      <img src="logo.jpg" alt="NightShift Collective">
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-label">Start a Project</div>
+    <h2>Custom project inquiry.</h2>
+    <p class="subtitle">Tell me what you need.</p>
+    <p><strong>Evie:</strong> <a href="mailto:kissedbyevie@gmail.com">kissedbyevie@gmail.com</a></p>
+    <p><strong>Text:</strong> <a href="tel:+12533874095">+1 253-387-4095</a></p>
+    <p>Projects: <a href="https://kissedbyevie-menu.onrender.com/" target="_blank">kissedbyevie-menu.onrender.com</a></p>
+  </section>
+
+  <footer>
+    <div>Built for operators. Designed for what's next.</div>
+    <div style="text-align:right;">
+      <strong>Nightshift Collective</strong><br>
+      by @kissedbyevie
+    </div>
+  </footer>
+</div>
+</body>
+</html>

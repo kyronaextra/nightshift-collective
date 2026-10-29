@@ -1,0 +1,6 @@
+{
+  "name": "nightshift-collective",
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}
